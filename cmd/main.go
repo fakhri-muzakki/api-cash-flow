@@ -7,6 +7,7 @@ import (
 
 	"cash-flow/internal/config"
 	"cash-flow/internal/handler"
+	"cash-flow/internal/middleware"
 	"cash-flow/internal/repository"
 	"cash-flow/internal/service"
 
@@ -26,6 +27,10 @@ func main() {
 	userRepo := repository.NewUserRepository(db)
 	authSvc := service.NewAuthService(userRepo)
 	authHandler := handler.NewAuthHandler(authSvc)
+
+	txRepo := repository.NewTransactionRepository(db)
+	txSvc := service.NewTransactionService(txRepo, userRepo, db)
+	txHandler := handler.NewTransactionHandler(txSvc)
 
 	r := gin.Default()
 
@@ -49,6 +54,15 @@ func main() {
 		}
 
 		// Protected routes
+		protected := api.Group("/")
+		protected.Use(middleware.AuthMiddleware())
+		{
+			protected.POST("/transactions", txHandler.Create)
+			protected.GET("/transactions", txHandler.GetAll)
+			protected.GET("/transactions/:id", txHandler.GetByID)
+			protected.PUT("/transactions/:id", txHandler.Update)
+			protected.DELETE("/transactions/:id", txHandler.Delete)
+		}
 	}
 
 	port := os.Getenv("APP_PORT")
