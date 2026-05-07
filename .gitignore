@@ -1,0 +1,62 @@
+# Binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+/main
+/main.exe
+
+# Dependency directories
+vendor/
+node_modules/
+
+# Go workspace file
+go.work
+go.work.sum
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment / Config
+.env
+.env.local
+.env.*.local
+*.env
+
+# Logs
+*.log
+logs/
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Build output
+/dist
+/build
+/bin
+/tmp
+
+# Air live reload (if you use Air)
+tmp/
+
+# Coverage files
+*.cover
+*.coverprofile
+coverage.out
+coverage.html
+
+# Test binaries
+*.test
+
+# Dependency lock (optional - keep if you want)
+# go.sum
