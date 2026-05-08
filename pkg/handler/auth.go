@@ -3,8 +3,8 @@ package handler
 import (
 	"net/http"
 
-	"cash-flow/internal/model"
-	"cash-flow/internal/service"
+	"cash-flow/pkg/model"
+	"cash-flow/pkg/service"
 
 	"github.com/gin-gonic/gin"
 )

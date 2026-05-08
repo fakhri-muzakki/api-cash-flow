@@ -4,9 +4,9 @@ import (
 	"net/http"
 	"strconv"
 
-	"cash-flow/internal/model"
-	"cash-flow/internal/repository"
-	"cash-flow/internal/service"
+	"cash-flow/pkg/model"
+	"cash-flow/pkg/repository"
+	"cash-flow/pkg/service"
 
 	"github.com/gin-gonic/gin"
 )

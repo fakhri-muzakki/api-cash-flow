@@ -4,7 +4,7 @@ import (
 	"context"
 	"database/sql"
 
-	"cash-flow/internal/model"
+	"cash-flow/pkg/model"
 )
 
 type UserRepository interface {

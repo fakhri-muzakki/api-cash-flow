@@ -7,8 +7,8 @@ import (
 	"strconv"
 	"time"
 
-	"cash-flow/internal/model"
-	"cash-flow/internal/repository"
+	"cash-flow/pkg/model"
+	"cash-flow/pkg/repository"
 
 	"github.com/golang-jwt/jwt/v5"
 	"golang.org/x/crypto/bcrypt"

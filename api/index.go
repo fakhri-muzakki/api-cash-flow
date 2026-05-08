@@ -7,11 +7,11 @@ import (
 
 	"time"
 
-	"cash-flow/internal/config"
-	"cash-flow/internal/handler"
-	"cash-flow/internal/middleware"
-	"cash-flow/internal/repository"
-	"cash-flow/internal/service"
+	"cash-flow/pkg/config"
+	"cash-flow/pkg/handler"
+	"cash-flow/pkg/middleware"
+	"cash-flow/pkg/repository"
+	"cash-flow/pkg/service"
 
 	cors "github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"

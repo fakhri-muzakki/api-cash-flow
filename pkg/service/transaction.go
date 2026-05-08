@@ -7,8 +7,8 @@ import (
 	"math"
 	"time"
 
-	"cash-flow/internal/model"
-	"cash-flow/internal/repository"
+	"cash-flow/pkg/model"
+	"cash-flow/pkg/repository"
 )
 
 type TransactionService interface {

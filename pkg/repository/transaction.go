@@ -5,7 +5,7 @@ import (
 	"database/sql"
 	"fmt"
 
-	"cash-flow/internal/model"
+	"cash-flow/pkg/model"
 )
 
 type TransactionRepository interface {
