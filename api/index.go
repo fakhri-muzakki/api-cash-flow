@@ -45,14 +45,14 @@ func setupApp() {
 		app.Use(gin.Recovery())
 
 		app.Use(cors.New(cors.Config{
-			AllowOrigins:     []string{os.Getenv("FRONTEND_URL")},
+			AllowOrigins:     []string{os.Getenv("CORS_ORIGIN_URL")},
 			AllowMethods:     []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
 			AllowHeaders:     []string{"Origin", "Content-Type", "Authorization"},
 			AllowCredentials: true,
 			MaxAge:           12 * time.Hour,
 		}))
 
-		api := app.Group("/api/v1")
+		api := app.Group("/api/")
 		{
 			auth := api.Group("/auth")
 			{

@@ -60,3 +60,4 @@ coverage.html
 
 # Dependency lock (optional - keep if you want)
 # go.sum
+.vercel
